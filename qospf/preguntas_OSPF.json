@@ -1,0 +1,329 @@
+[
+  {
+    "id": "q1",
+    "texto": "1. Si una red es convergente, ¿cuál de las siguientes afirmaciones es verdadera acerca de la base de datos de Link-State que tiene cada router de la misma área OSPF?",
+    "tipo": "radio",
+    "imagen": "",
+    "opciones": {
+      "a": "Cada router tiene una base de datos de Link-State que contiene la misma información de estado.",
+      "b": "Cada router tiene una base de datos de Link-State diferente según su posición en la red.",
+      "c": "La base de datos de Link-State se almacena en un router designado.",
+      "d": "La base de datos de Link-State de cada router sólo contiene información sobre los routers adyacentes."
+    },
+    "correctas": ["a"]
+  },
+
+    {
+    "id": "q2",
+    "texto": "2. ¿Cuál es la diferencia principal entre los protocolos de link-state y los protocolos vector distancia con respecto al cálculo de la ruta?",
+    "tipo": "radio",
+    "imagen": "",
+    "opciones": {
+      "a": "Los protocolos vector distancia toman rutas existentes de sus vecinos y las expanden. Los protocolos de link-state calculan las rutas completas de manera independiente.",
+      "b": "Los protocolos de link-state calculan y pasan tablas de enrutamiento completas a todos los routers de sus áreas asociadas, mientras que los protocolos vector distancia no lo hacen.",
+      "c": "Al determinar rutas no válidas, los protocolos de link-state utilizan el horizonte dividido para todos los cálculos de rutas. Los protocolos vector distancia utilizan envenenamiento inverso.",
+      "d": "Los protocolos vector distancia requieren más recursos de CPU y RAM para calcular las rutas que los protocolos de link-state."
+    },
+    "correctas": ["a"]
+  },
+
+    {
+    "id": "q3",
+    "texto": "3. Consulte la muestra. ¿Cuál es el propósito del valor 128 que aparece en negrita?",
+    "tipo": "radio",
+    "imagen": "img/picture3.png",
+    "opciones": {
+      "a": "Es la métrica del costo de OSPF.",
+      "b": "Es la distancia administrativa de OSPF.",
+      "c": "Es el valor asignado por el algoritmo de Dijkstra que designa la distancia en saltos a la red.",
+      "d": "Es el valor asignado a una interfaz que utiliza el algoritmo DUAL para determinar la métrica."
+    },
+    "correctas": ["a"]
+  },
+{
+    "id": "q4",
+    "texto": "4. &iquest;Qu&eacute; rango de redes se publican en las actualizaciones OSPF por el comando <code>Router1(config-router)# network 192.168.0.0 0.0.15.255 area 0</code>?",
+    "tipo": "radio",
+    "imagen": "",
+    "opciones": {
+      "a": "de 192.168.0.0/24 a 192.168.0.15/24",
+      "b": "de 192.168.0.0/24 a 192.168.15.0/24",
+      "c": "de 192.168.15.0/24 a 192.168.31.0/24",
+      "d": "de 192.168.15.0/24 a 192.168.255.0/24",
+      "e": " de 192.168.16.0/24 a 192.168.255.0/24"
+    },
+    "correctas": ["b"]
+  },
+
+  {
+    "id": "q5",
+    "texto": "5. ¿Qué funciones están asociadas con entornos de punto a multipunto OSPF Frame Relay? (Elija dos opciones.)",
+    "tipo": "checkbox",
+    "imagen": "",
+    "opciones": {
+      "a": "No se ha elegido un DR.",
+      "b": "El valor de prioridad OSPF determina el DR activo en el enlace de Frame Relay.",
+      "c": "Los routers vecinos OSPF se definen estáticamente.",
+      "d": "Los tipos de enlace están identificados como broadcast de accesos múltiples.",
+      "e": "El BDR tendrá un ID de router cuyo valor es mayor que el del DR."
+    },
+    "correctas": ["a", "c"]
+  },
+  {
+    "id": "q6",
+    "texto": "6. Consulte la muestra. &iquest;Qu&eacute; comandos configuran el router A para OSPF?",
+    "tipo": "radio",
+    "imagen": "img/picture6.png",
+    "opciones": {
+      "a": "router ospf 1 <br> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;network 192.168.10.0",
+      "b": "router ospf 1 <br/> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;network 192.168.10.64 0.0.0.63 area 0 <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;network 192.168.10.192 0.0.0.3 area 0",
+      "c": "router ospf 1 <br> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;network 192.168.10.64 255.255.255.192 <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;network 192.168.10.192 255.255.255.252",
+      "d": "router ospf 1 <br> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;network 192.168.10.0 area 0"
+    },
+    "correctas": ["b"]
+  }, 
+  {
+    "id": "q7",
+    "texto": "7. &iquest;Qu&eacute; dos afirmaciones describen el uso de las elecciones OSPF DR/BDR? (Elija dos opciones).",
+    "tipo": "checkbox",
+    "imagen": "",
+    "opciones": {
+      "a": "Las elecciones siempre son opcionales.",
+      "b": "Las elecciones son necesarias en todas las redes WAN.",
+      "c": "Las elecciones son necesarias en todas las redes punto a punto.",
+      "d": "Las elecciones son necesarias en las redes de acceso m&uacute;ltiple de broadcast.",
+      "e": "Con frecuencia las elecciones se requieren en redes NBMA."
+    },
+    "correctas": ["d", "e"]
+  },
+  {
+    "id": "q8",
+    "texto": "8. &iquest;Qu&eacute; se necesita siempre para los routers OSPF para compartir la informaci&oacute;n de enrutamiento?",
+    "tipo": "radio",
+    "imagen": "",
+    "opciones": {
+      "a": "routers designados",
+      "b": "router designado de respaldo",
+      "c": "adyacencias con los vecinos",
+      "d": "topolog&iacute;a de la red NBMA",
+      "e": "enlaces configurados en la red"
+    },
+    "correctas": ["c"]
+  },
+  {
+    "id": "q9",
+    "texto": "9. &iquest;Cu&aacute;l de las siguientes declaraciones es verdadera con respecto a la selecci&oacute;n de DR y BDR de OSPF?",
+    "tipo": "radio",
+    "imagen": "",
+    "opciones": {
+      "a": "Ocurre una nueva selecci&oacute;n de DR y BDR cada vez que se agrega un nuevo vecino OSPF.",
+      "b": "El router con la configuraci&oacute;n OSPF de mayor prioridad gana la selecci&oacute;n para DR.",
+      "c": "El valor de prioridad por defecto para un router conectado a una red de accesos m&uacute;ltiples es 0.",
+      "d": "El router con la direcci&oacute;n MAC m&aacute;s alta se elije como DR cuando se utilizan los valores de prioridad por defecto."
+    },
+    "correctas": ["b"]
+
+  },
+    {
+        "id": "q10",
+        "texto": "10. Consulte la muestra. El administrador de red desea que s&oacute;lo se publique la red",
+        "tipo": "radio",
+        "imagen": "img/picture10.png",
+        "opciones": {
+            "a": "Router2(config-router)# network 172.16.0.0 0.0.0.15 area 0",
+            "b": "Router2(config-router)# network 172.16.0.0 0.0.15.255 area 0",
+            "c": "Router2(config-router)# network 172.16.32.0 0.0.15.255 area 0",
+            "d": "Router2(config-router)# network 172.16.32.0 0.0.255.255 area 0"
+        }, 
+        "correctas": ["c"]
+    },
+{
+  "id": "q11",
+  "texto": "11. Consulte la ilustraci&oacute;n. Como parte de una red OSPF, R1 y R2 intentan convertirse en vecinos adyacentes. A pesar de que parece que los dos sistemas se comunican, ninguna de las tablas de enrutamiento incluye rutas OSPF recibidas de su vecino. &iquest;Qu&eacute; podr&iacute;a estar causando esta situaci&oacute;n?",
+  "tipo": "radio",
+  "imagen": "img/picture11.png",
+  "opciones": {
+    "a": "R1 y R2 no est&aacute;n en la misma subred.",
+    "b": "Los ID de proceso en cada router no coinciden.",
+    "c": "Los intervalos de tiempo en los routers no coinciden.",
+    "d": "El valor establecido para el tiempo de demora de la transmisi&oacute;n en ambos routers es demasiado bajo."
+  },
+  "correctas": ["c"]
+},
+{
+  "id": "q12",
+  "texto": "12. &iquest;Cu&aacute;les son las ventajas de usar un protocolo de enrutamiento de estado de enlace en lugar de uno de vector de distancia? (Elija dos opciones).",
+  "tipo": "checkbox",
+  "imagen": "",
+  "opciones": {
+    "a": "La base de datos de topolog&iacute;a elimina la necesidad de una tabla de enrutamiento.",
+    "b": "Se env&iacute;an actualizaciones peri&oacute;dicas frecuentes para minimizar la cantidad de rutas incorrectas en la base de datos topol&oacute;gica.",
+    "c": "Los routers tienen conocimiento directo de todos los enlaces en la red y la manera en que se conectan.",
+    "d": "Despu&eacute;s de la distribuci&oacute;n inicial de notificaciones de Link-State (LSA), los routers generalmente requieren menos ancho de banda para comunicar cambios en una topolog&iacute;a.",
+    "e": "Un protocolo de enrutamiento de estado de enlace requiere menos potencia de procesador del router."
+  },
+  "correctas": ["c", "d"]
+},
+{
+  "id": "q13",
+  "texto": "13. Consulte la ilustraci&oacute;n. Un administrador de red ha implementado OSPF y la red ha convergido. Si todas las interfaces del router est&aacute;n activadas y funcionan, &iquest;qu&eacute; ruta ver&aacute; OSPF como de menor costo al mover tramas de Host3 a Host1?",
+  "tipo": "radio",
+  "imagen": "img/picture13.png",
+  "opciones": {
+    "a": "R3 a R4 a R1",
+    "b": "R3 a R1",
+    "c": "R3 a R2 a R1",
+    "d": "R3 a R5 a R2 a R1"
+  },
+  "correctas": ["c"]
+},
+{
+  "id": "q14",
+  "texto": "14. Consulte la muestra. &iquest;Cu&aacute;l es el prop&oacute;sito de los comandos de configuraci&oacute;n agregados en el router B?",
+  "tipo": "radio",
+  "imagen": "img/picture14.png",
+  "opciones": {
+    "a": "Permiten que el router A forme una adyacencia con el router B.",
+    "b": "Proporcionan una identificaci&oacute;n del router de OSPF estable en el router B.",
+    "c": "Proporcionan un m&eacute;todo para probar el tr&aacute;fico del router.",
+    "d": "Crean una tabla de adyacencia OSPF en el router B."
+  },
+  "correctas": ["b"]
+},
+{
+  "id": "q15",
+  "texto": "15. Consulte la ilustraci&oacute;n. Se introduce el comando <code>ip route 10.16.1.64 255.255.255.252 s0/0/0</code> en el router. &iquest;Por qu&eacute; aparece la red 10.16.1.64/30 en la tabla de enrutamiento adem&aacute;s de la red 10.16.1.64/27?",
+  "tipo": "radio",
+  "imagen": "img/picture15.png",
+  "opciones": {
+    "a": "El router ve 10.16.1.64/30 y 10.16.1.64/27 como dos redes diferentes.",
+    "b": "La ruta est&aacute;tica se usa como ruta de respaldo para los paquetes destinados a 10.16.1.64/27.",
+    "c": "La AD para las rutas est&aacute;ticas es menor que la AD de las rutas OSPF.",
+    "d": "La m&eacute;trica de la ruta est&aacute;tica es menor que la m&eacute;trica OSPF para la red 10.16.1.64/27."
+  },
+  "correctas": ["a"]
+},
+{
+  "id": "q16",
+  "texto": "16. Consulte la muestra. RTRC se configur&oacute; recientemente y no est&aacute; enviando las rutas OSPF correctas a RTRB, como se muestra en la tabla de enrutamiento de RTRB. En funci&oacute;n de la configuraci&oacute;n de RTRC, &iquest;cu&aacute;l ser&iacute;a el problema m&aacute;s probable?",
+  "tipo": "radio",
+  "imagen": "img/picture16.png",
+  "opciones": {
+    "a": "Las interfaces de RTRC est&aacute;n administrativamente desconectadas.",
+    "b": "El ID de proceso de OSPF para RTRC no coincide con el ID de proceso utilizado en RTRB.",
+    "c": "Las direcciones de las interfaces en RTRC se superponen con otras direcciones de red.",
+    "d": "La configuraci&oacute;n de enrutamiento OSPF de RTRC tiene una sentencia de red incorrecta o faltante."
+  },
+  "correctas": ["d"]
+},
+{
+  "id": "q17",
+  "texto": "17. Consulte la muestra. &iquest;Qu&eacute; sentencia de red configura el router del hogar para permitir que todas las interfaces participen en OSPF?",
+  "tipo": "radio",
+  "imagen": "img/picture17.png",
+  "opciones": {
+    "a": "network 10.0.0.0 0.3.255.255 area 0",
+    "b": "network 10.8.0.0 0.0.0.3 area 0",
+    "c": "network 10.8.0.0 0.3.255.255 area 0",
+    "d": "network 10.10.0.0 0.0.0.3 area 0",
+    "e": "network 10.12.0.0 0.3.255.255 area 0"
+  },
+  "correctas": ["c"]
+},
+{
+  "id": "q18",
+  "texto": "18. Al compararse con un protocolo de enrutamiento vector distancia, &iquest;cu&aacute;l es el beneficio del enfoque de dise&ntilde;o jer&aacute;rquico que se utiliza en las redes OSPF grandes?",
+  "tipo": "radio",
+  "imagen": "",
+  "opciones": {
+    "a": "Configuraci&oacute;n m&aacute;s simple",
+    "b": "Reducci&oacute;n de los requisitos de procesamiento del router",
+    "c": "Aislamiento de la inestabilidad de la red",
+    "d": "Planificaci&oacute;n de red menos compleja"
+  },
+  "correctas": ["c"]
+},
+{
+  "id": "q19",
+  "texto": "19. Consulte la muestra. Al establecer relaciones de adyacencia, &iquest;qu&eacute; direcci&oacute;n IP usar&iacute;a el router A para enviar paquetes de saludo al router B?",
+  "tipo": "radio",
+  "imagen": "img/picture19.png",
+  "opciones": {
+    "a": "10.11.0.1",
+    "b": "10.11.0.2",
+    "c": "10.11.0.255",
+    "d": "224.0.0.5",
+    "e": "255.255.255.255"
+  },
+  "correctas": ["d"]
+},
+{
+  "id": "q20",
+  "texto": "20. Consulte la ilustraci&oacute;n. &iquest;Qu&eacute; router se elegir&aacute; como DR y cu&aacute;l se convertir&aacute; en BDR?",
+  "tipo": "radio",
+  "imagen": "img/picture20.png",
+  "opciones": {
+    "a": "R1 ser&aacute; DR y R2 ser&aacute; BDR.",
+    "b": "R1 ser&aacute; DR y R3 ser&aacute; BDR.",
+    "c": "R2 ser&aacute; DR y R1 ser&aacute; BDR.",
+    "d": "R2 ser&aacute; DR y R3 ser&aacute; BDR.",
+    "e": "R3 ser&aacute; DR y R2 ser&aacute; BDR.",
+    "f": "R3 ser&aacute; DR y R1 ser&aacute; BDR."
+  },
+  "correctas": ["b"]
+},
+{
+  "id": "q21",
+  "texto": "21. Consulte la muestra. Los routers A, B y C son parte de la red OSPF existente. El router D se agreg&oacute; a la red. Todos los routers est&aacute;n ejecutando OSPF y tienen las prioridades indicadas aplicadas en la interfaz. &iquest;Cu&aacute;l es el estado de DR/BDR inmediatamente despu&eacute;s de haber agregado el router D a la red existente?",
+  "tipo": "radio",
+  "imagen": "img/picture21.png",
+  "opciones": {
+    "a": "Se genera una selecci&oacute;n forzada y el router D gana la selecci&oacute;n de DR.",
+    "b": "DR y BDR no cambian hasta la siguiente selecci&oacute;n.",
+    "c": "Se genera una selecci&oacute;n forzada y el BDR existente pasa a ser el DR.",
+    "d": "El router con ID de router m&aacute;s elevada se convierte en el nuevo BDR."
+  },
+  "correctas": ["b"]
+},
+{
+  "id": "q22",
+  "texto": "22. &iquest;Cu&aacute;les son las afirmaciones que describen el funcionamiento de los protocolos de enrutamiento link-state? (Elija dos opciones).",
+  "tipo": "checkbox",
+  "imagen": "",
+  "opciones": {
+    "a": "Todos los routers en la misma &aacute;rea tienen bases de datos de link-state idénticas cuando convergen.",
+    "b": "Los loops de enrutamiento se evitan al ejecutar el algoritmo de actualizaci&oacute;n difusa (DUAL).",
+    "c": "Los routers de link-state env&iacute;an actualizaciones peri&oacute;dicas frecuentes de la tabla de enrutamiento completa.",
+    "d": "Se utiliza el protocolo de transporte confiable (RTP) para el env&iacute;o y la recepci&oacute;n de LSA.",
+    "e": "El c&aacute;lculo de la ruta m&aacute;s corta a cada destino se logra mediante el algoritmo SPF."
+  },
+  "correctas": ["a", "e"]
+},
+{
+  "id": "q23",
+  "texto": "23. Consulte la ilustraci&oacute;n. &iquest;Qu&eacute; afirmaci&oacute;n describe la relaci&oacute;n DR/BDR del router HQ?",
+  "tipo": "radio",
+  "imagen": "img/picture23.png",
+  "opciones": {
+    "a": "HQ es el DR.",
+    "b": "HQ es el BDR.",
+    "c": "HQ es un DROTHER.",
+    "d": "HQ es miembro de una red NBMA."
+  },
+  "correctas": ["c"]
+},
+{
+  "id": "q24",
+  "texto": "24. Consulte la ilustraci&oacute;n. &iquest;C&oacute;mo se determin&oacute; la entrada de gateway predeterminado OSPF para R2?",
+  "tipo": "radio",
+  "imagen": "img/picture24.png",
+  "opciones": {
+    "a": "OSPF inyecta autom&aacute;ticamente las rutas predeterminadas en todas las publicaciones.",
+    "b": "Se define una ruta est&aacute;tica de gateway predeterminada en la configuraci&oacute;n de R2.",
+    "c": "El comando default-information originate se aplica en R1.",
+    "d": "El ISP define el gateway de &uacute;ltimo recurso y lo pasa autom&aacute;ticamente a R1 y R2.",
+    "e": "El comando ip default-gateway se aplica en R2."
+  },
+  "correctas": ["c"]
+}
+]

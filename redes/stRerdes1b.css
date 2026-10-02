@@ -1,0 +1,17 @@
+.image-links {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-top: 30px;
+}
+
+.big-link {
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+    transition: transform 0.2s;
+}
+
+.big-link:hover {
+    transform: scale(1.05);
+}

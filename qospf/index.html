@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<title>Cuestionario Dinámico</title>
+<style>
+  body {
+    font-family: Arial, sans-serif;
+    margin: 20px;
+    background: #fafafa;
+  }
+  h1 {
+    text-align: center;
+  }
+  .pregunta {
+    border: 1px solid #ccc;
+    background: #fff;
+    border-radius: 6px;
+    margin-bottom: 20px;
+    padding: 12px;
+  }
+ /* .pregunta img {
+    float: left;
+    margin-right: 10px;
+    margin-bottom: 6px;
+    max-width: 400px;
+    border-radius: 4px;
+    border: 1px solid #aaa;
+  }*/
+  .pregunta img {
+  display: inline-block; /* Asegura que la imagen no flote */
+  margin: 0 10px 10px 0; /* Margen derecho e inferior para separación */
+  max-width: 400px;
+  border-radius: 4px;
+  border: 1px solid #aaa;
+  vertical-align: top; /* Alinea la imagen con el texto */
+}
+  .correcta { background-color: #d4edda; }
+  .incorrecta { background-color: #f8d7da; }
+  .resultado { font-weight: bold; margin-top: 8px; }
+  button {
+    display: block;
+    margin: 30px auto;
+    padding: 10px 20px;
+    font-size: 16px;
+  }
+  #resumen {
+    text-align: center;
+    font-weight: bold;
+    font-size: 18px;
+    margin-top: 30px;
+  }
+</style>
+</head>
+<body>
+<h1>Cuestionario OSPF </h1>
+<div id="contenedor"></div>
+<button id="btnEnviar">Enviar</button>
+<div id="resumen"></div>
+
+<script>
+let preguntasCargadas = [];
+
+// Carga el archivo JSON y genera el cuestionario
+async function iniciarCuestionario() {
+  try {
+    const resp = await fetch("preguntas_OSPF.json");
+    if (!resp.ok) throw new Error("No se pudo cargar preguntas.json");
+    preguntasCargadas = await resp.json();
+    generarFormulario(preguntasCargadas);
+  } catch (error) {
+    document.getElementById("contenedor").innerHTML =
+      "<p style='color:red;'>Error al cargar el cuestionario: " + error.message + "</p>";
+  }
+}
+
+// Genera dinámicamente las preguntas
+function generarFormulario(preguntas) {
+  const contenedor = document.getElementById("contenedor");
+  contenedor.innerHTML = "";
+
+  preguntas.forEach(p => {
+    const div = document.createElement("div");
+    div.className = "pregunta";
+    div.id = p.id;
+
+    // Imagen opcional
+    if (p.imagen && p.imagen.trim() !== "") {
+      const img = document.createElement("img");
+      img.src = p.imagen;
+      img.alt = "Imagen de la pregunta";
+      div.appendChild(img);
+    }
+
+    // Texto de la pregunta
+    const texto = document.createElement("p");
+    texto.innerHTML = p.texto;
+    div.appendChild(texto);
+
+    // Opciones
+    for (const clave in p.opciones) {
+      const label = document.createElement("label");
+      label.style.display = "block";
+
+      const input = document.createElement("input");
+      input.type = p.tipo;
+      input.name = p.id;
+      input.value = clave;
+
+      label.appendChild(input);
+
+      // Usa innerHTML para interpretar el contenido como HTML
+      const opcionTexto = document.createElement("span");
+      opcionTexto.innerHTML = " " + p.opciones[clave];
+      label.appendChild(opcionTexto);
+
+      div.appendChild(label);
+    }
+
+    // Resultado de la pregunta
+    const resultado = document.createElement("div");
+    resultado.className = "resultado";
+    div.appendChild(resultado);
+
+    contenedor.appendChild(div);
+  });
+}
+
+// Comparación de arreglos (para las checkbox)
+function arraysIguales(a, b) {
+  if (!Array.isArray(a) || !Array.isArray(b)) return false;
+  if (a.length !== b.length) return false;
+  const aa = a.slice().sort();
+  const bb = b.slice().sort();
+  return aa.every((v, i) => v === bb[i]);
+}
+
+// Corrige las respuestas
+function corregir() {
+  let correctas = 0;
+  let incorrectas = 0;
+
+  preguntasCargadas.forEach(p => {
+    const div = document.getElementById(p.id);
+    const resultado = div.querySelector(".resultado");
+    div.classList.remove("correcta", "incorrecta");
+    resultado.textContent = "";
+
+    if (p.tipo === "checkbox") {
+      const marcadas = Array.from(document.querySelectorAll(`input[name="${p.id}"]:checked`)).map(i => i.value);
+      if (marcadas.length === 0) {
+        div.classList.add("incorrecta");
+        resultado.textContent = "✖ No respondida";
+        incorrectas++;
+      } else if (arraysIguales(marcadas, p.correctas)) {
+        div.classList.add("correcta");
+        resultado.textContent = "✔ Correcto";
+        correctas++;
+      } else {
+        div.classList.add("incorrecta");
+        resultado.textContent = "✖ Incorrecto";
+        incorrectas++;
+      }
+    } else {
+      const marcada = document.querySelector(`input[name="${p.id}"]:checked`);
+      if (!marcada) {
+        div.classList.add("incorrecta");
+        resultado.textContent = "✖ No respondida";
+        incorrectas++;
+      } else if (p.correctas.includes(marcada.value)) {
+        div.classList.add("correcta");
+        resultado.textContent = "✔ Correcto";
+        correctas++;
+      } else {
+        div.classList.add("incorrecta");
+        resultado.textContent = "✖ Incorrecto";
+        incorrectas++;
+      }
+    }
+  });
+
+  document.getElementById("resumen").innerHTML =
+    "Respuestas correctas: " + correctas + " &nbsp;&nbsp; Incorrectas: " + incorrectas;
+}
+
+// Eventos
+document.getElementById("btnEnviar").addEventListener("click", corregir);
+
+// Carga inicial
+iniciarCuestionario();
+</script>
+
+
+
+</body>
+</html>

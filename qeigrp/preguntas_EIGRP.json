@@ -1,0 +1,340 @@
+[
+  {
+    "id": "q1",
+    "texto": "1. Consulte la ilustración. Los routers A y B tienen EIGRP configurado y la sumarización automática se ha desactivado en ambos routers. ¿Qué comando aplicado en la interfaz S0/0/0 del router A sumariza manualmente las redes en publicaciones de EIGRP al router B?",
+    "tipo": "radio",
+    "imagen": "Picture1.jpg",
+    "opciones": {
+      "a": "ip area-range eigrp 1 192.168.10.80 255.255.255.224",
+      "b": "ip summary-address eigrp 1 192.168.10.64 255.255.255.192",
+      "c": "ip summary-address 192.168.10.80 0.0.0.31",
+      "d": "ip summary-address eigrp 1 192.168.10.64 0.0.0.63",
+      "e": "ip area-range eigrp 1 192.168.100,64 255.255.255.224"
+    },
+    "correctas": ["b"]
+  },
+  {
+    "id": "q2",
+    "texto": "2. Consulte la ilustración. El administrador de red debe configurar una ruta predeterminada en el router de borde. ¿Qué comando configura correctamente una ruta predeterminada que requerirá la menor cantidad posible de procesamiento del router al enviar paquetes?",
+    "tipo": "radio",
+    "imagen": "Picture2.jpg",
+    "opciones": {
+      	"a": "ip route 0.0.0.0 0.0.0.0 64.100.59.5",
+     	"b": "ip route 0.0.0.0 0.0.0.0 64.100.59.6",
+ 	    "c": "ip route 0.0.0.0 0.0.0.0 s0/0/1",
+ 	    "d": "ip route 0.0.0.0 0.0.0.0 s1/2/1"
+    },
+    "correctas": ["b"]
+  },
+  {
+    "id": "q3",
+    "texto": "3. ¿Qué es lo que impide que las actualizaciones RIPv1 se publiquen correctamente?",
+    "tipo": "radio",
+    "imagen": "",
+    "opciones": {
+     	"a": "Un aumento en la carga de la red",
+ 	    "b": "El uso de máscaras de subred de longitud variable",
+     	"c": "El uso de varias redes de la Capa 3 en el mismo router",
+     	"d": "Una variación de las velocidades de conexión en los enlaces hacia un destino",
+     	"e": "La falta de concordancia entre el ancho de banda configurado y el ancho de banda real de un enlace"
+    },
+    "correctas": ["b"]
+  },
+  {
+    "id": "q4",
+    "texto": "4. ¿Cuál es el protocolo de capa 4 que usa EIGRP para proporcionar confiabilidad para la transmisión de la información de enrutamiento?",
+    "tipo": "radio",
+    "imagen": "",
+    "opciones": {
+     	"a": "DUAL",
+ 	    "b": "IP",
+     	"c": "PDM",
+     	"d": "RTP",
+     	"e": "TCP",
+     	"f": "UDP"
+    },
+    "correctas": ["d"]
+  },
+  {
+    "id": "q5",
+    "texto": "5. Consulte la ilustración. ¿Cuáles son las funciones verdaderas acerca de la topología ilustrada? (Elija dos opciones.)",
+    "tipo": "checkbox",
+    "imagen": "Picture5.jpg",
+    "opciones": {
+     	"a": "Introduce un punto de error único",
+ 	    "b": "Se requiere cuando no se acepta tiempo de inactividad",
+     	"c": "Proporciona la máxima redundancia disponible",
+     	"d": "Proporciona redundancia para las áreas críticas",
+     	"e": "Representa una topología en estrella extendida",
+     	"f": "Se utiliza para cumplir con los requisitos de tiempo de actividad y confiabilidad limitando los costos"
+    },
+    "correctas": ["c", "d"]
+  },
+  {
+    "id": "q6",
+    "texto": "6. Consulte la ilustración. ¿Cuáles son las conclusiones que se pueden determinar en base a los comandos que se muestran? (Elija tres opciones.)",
+    "tipo": "checkbox",
+    "imagen": "Picture6.jpg",
+    "opciones": {
+     	"a": "Se usa un protocolo de enrutamiento de link-state.",
+ 	    "b": "Se usa un protocolo de enrutamiento vector distancia.",
+     	"c": "Las actualizaciones de enrutamiento se transmiten por broadcast cada 30 segundos.",
+     	"d": "Las actualizaciones de enrutamiento se transmiten por broadcast cada 90 segundos.",
+     	"e": "Utiliza el número de saltos como única métrica para la selección de rutas.",
+     	"f": "El ancho de banda, la carga, el retardo y la confiabilidad son métricas utilizadas para la selección de ruta."
+    },
+    "correctas": ["b", "d", "f"]
+  },
+  {
+    "id": "q7",
+    "texto": "7. ¿Cuál es el propósito del comando network al configurar RIP como el protocolo de enrutamiento?",
+    "tipo": "radio",
+    "imagen": "",
+    "opciones": {
+     	"a": "Identifica las redes conectadas al router vecino.",
+ 	    "b": "Impide que las redes se utilicen para rutas estáticas.",
+     	"c": "Identifica todas las redes destino que al router se le permite instalar en su tabla de enrutamiento.",
+     	"d": "Identifica las redes directamente conectadas que se incluirán en las actualizaciones de enrutamiento RIP."
+    },
+    "correctas": ["d"]
+  },
+  {
+    "id": "q8",
+    "texto": "8. ¿Qué utiliza un router que ejecuta RIP para determinar la mejor ruta para enviar los datos?",
+    "tipo": "radio",
+    "imagen": "",
+    "opciones": {
+     	"a": "la porción host de la dirección de red",
+ 	    "b": "la velocidad de convergencia de la red",
+     	"c": "la métrica calculada para la red destino",
+     	"d": "la cantidad de broadcasts que se producen en una interfaz",
+     	"e": "la cantidad de errores que se producen en una interfaz"
+    },
+    "correctas": ["c"]
+  },
+  {
+    "id": "q9",
+    "texto": "9. Consulte la ilustración. Los routers están configurados con EIGRP y valores K predeterminados. ¿ ál es la ruta de enrutamiento para que un paquete de la red A alcance la red B?",
+    "tipo": "radio",
+    "imagen": "Picture9.jpg",
+    "opciones": {
+     	"a": "R1, R2, R5",
+ 	    "b": "R1, R3, R5",
+     	"c": "R1, R2, R3, R5",
+     	"d": "R1, R2, R4, R5",
+     	"e": "R1, R3, R2, R5",
+     	"f": "R1, R3, R2, R4, R5"
+    },
+    "correctas": ["b"]
+  },
+  {
+    "id": "q10",
+    "texto": "10. ¿Cuándo se debe desactivar la sumarización automática de EIGRP?",
+    "tipo": "radio",
+    "imagen": "",
+    "opciones": {
+     	"a": "Cuando un router no ha descubierto un vecino en un lapso de tres minutos.",
+ 	    "b": "Cuando un router tiene más de tres interfaces activas.",
+     	"c": "Cuando una red contiene direcciones de red que no son contiguas.",
+     	"d": "Cuando un router tiene menos de cinco interfaces activas.",
+     	"e": "Cuando un esquema de direccionamiento de red utiliza VLSM."
+    },
+    "correctas": ["c"]
+  },
+    {
+        "id": "q11",
+        "texto": "11. Consulte la muestra. ¿Qué afirmación es verdadera acerca del resultado del comando show ip protocols?",
+        "tipo": "radio",
+        "imagen": "Picture11.jpg",
+        "opciones": {
+         	"a": "RIPv2 está configurado en este router.",
+     	    "b": "Se deshabilitó la sumarización automática.",
+         	"c": "La siguiente actualización de enrutamiento es en 17 segundos.",
+         	"d": "192.168.16.1 es la dirección configurada en el router local."
+        },
+    "correctas": ["a"]
+    },    
+    {
+    "id": "q12",
+    "texto": "12. ¿Qué funciones de EIGRP son diferentes de RIPv2? (Elija dos opciones.)",
+    "tipo": "checkbox",
+    "imagen": "",
+    "opciones": {
+     	"a": "Métrica de enrutamiento",
+ 	    "b": "Compatibilidad con VLSM",
+     	"c": "Actualizaciones de enrutamiento",
+     	"d": "Enrutamiento sin clase",
+     	"e": "Método de autenticación MD5"
+    },
+    "correctas": ["a", "c"]
+    },
+    {
+    "id": "q13",
+    "texto": "13. ¿Qué es lo que se indica cuando una ruta EIGRP se encuentra en estado pasivo?",
+    "tipo": "radio",
+    "imagen": "",
+    "opciones": {
+     	"a": "La ruta tiene el costo de ruta más alto de todas las rutas hacia esa red destino.",
+ 	    "b": "La ruta debe ser confirmada por los routers vecinos antes de que se la coloque en estado activo.",
+     	"c": "La ruta es un sucesor factible y se utilizará en caso de que la ruta activa falle.",
+     	"d": "No hay ninguna actividad en la ruta hacia esa red.",
+     	"e": "La ruta es viable y se puede utilizar para enviar tráfico."
+    },
+    "correctas": ["d"]
+    },
+    {
+    "id": "q14",
+    "texto": "14. ¿Qué afirmaciones son verdaderas acerca de los routers que se configuran para EIGRP? (Elija tres opciones).",
+    "tipo": "checkbox",
+    "imagen": "",
+    "opciones": {
+     	"a": "Pueden admitir varios protocolos enrutados.",
+ 	    "b": "Sólo pueden admitir protocolos de link-state.",
+     	"c": "Envían sus tablas de topología completas a los routers vecinos.",
+     	"d": "Envían actualizaciones de enrutamiento parciales en respuesta a cambios en la topología.",
+     	"e": "Envían actualizaciones de enrutamiento a todos los demás routers de la red.",
+     	"f": "Utilizan paquetes de saludo para informar su estado a los routers vecinos."
+    },
+    "correctas": ["a", "d", "f"]
+    },
+    {
+    "id": "q15",
+    "texto": "15. ¿Cómo hacen los routers de EIGRP para establecer y mantener relaciones de vecinos?",
+    "tipo": "radio",
+    "imagen": "",
+    "opciones": {
+     	"a": "Mediante el intercambio de tablas de vecinos con los routers conectados directamente",
+ 	    "b": "Mediante la comparación de rutas conocidas con la información recibida en las actualizaciones",
+     	"c": "Mediante el intercambio de paquetes de saludo con los routers vecinos",
+     	"d": "Mediante el aprendizaje dinámico de nuevas rutas de los vecinos",
+     	"e": "Mediante el intercambio de tablas de enrutamiento con los routers conectados directamente"
+        },
+    "correctas": ["c"]
+    },
+
+
+
+{
+    "id": "q16",
+    "texto": "16. Una red empresarial actualmente utiliza una topología en estrella para conectar las oficinas centrales a cuatro sucursales. El administrador de red desea realizar una conexión centralizada en una de las sucursales para las tres oficinas locales nuevas. ¿Cuál es la topología resultante?",
+    "tipo": "radio",
+    "imagen": "",
+    "opciones": {
+     	"a": "malla completa",
+ 	    "b": "malla parcial",
+     	"c": "Estrella extendida",
+     	"d": "La topología sigue siendo en estrella"
+    },
+    "correctas": ["c"]
+    },
+	{
+    "id": "q17",
+    "texto": "17. Por defecto, ¿con qué frecuencia envía RIPv2 actualizaciones de la tabla de enrutamiento?",
+    "tipo": "radio",
+    "imagen": "",
+    "opciones": {
+     	"a": "Cada 30 segundos",
+ 	    "b": "Cada 45 segundos",
+     	"c": "Cada 60 segundos",
+     	"d": "Cada 90 segundos"
+    },
+    "correctas": ["a"]
+    },
+    {
+    "id": "q18",
+    "texto": "18. ¿Cuál es la distancia máxima en saltos que puede tener un router remoto para seguir siendo considerado alcanzable por RIP?",
+    "tipo": "radio",    
+    "imagen": "",
+    "opciones": {
+     	"a": "14 saltos",
+ 	    "b": "15 saltos",
+     	"c": "16 saltos",
+     	"d": "17 saltos"
+    },
+    "correctas": ["b"]
+    },
+    {
+    "id": "q19",
+    "texto": "19. ¿Cuál es la distancia administrativa por defecto para las rutas internas EIGRP?",
+    "tipo": "radio",
+    "imagen": "",
+    "opciones": {
+     	"a": "70",
+ 	    "b": "90",
+     	"c": "100",
+     	"d": "110",
+     	"e": "120",
+     	"f": "255"
+    },
+    "correctas": ["b"]
+    },
+    {
+    "id": "q20",
+    "texto": "20. ¿Qué afirmaciones son correctas con respecto a la autenticación EIGRP? (Elija dos opciones).",
+    "tipo": "checkbox",
+    "imagen": "",
+    "opciones": {
+        "a": "La autenticación EIGRP usa el algoritmo MD5.",
+        "b": "La autenticación EIGRP usa una clave compartida previamente.",
+        "c": "La autenticación EIGRP requiere que los dos routers tengan el mismo nombre de cadena de clave.",
+        "d": "La autenticación EIGRP usa diferentes niveles de WEP para encriptar los datos intercambiados entre los routers.",
+        "e": "La autenticación EIGRP se puede configurar en un router y las actualizaciones de este router están protegidas, mientras que un router vecino puede no tener la configuración de autenticación y sus actualizaciones no estarán protegidas."
+    },
+    "correctas": ["a", "b"]
+    },
+
+    {
+    "id": "q21",
+    "texto": "21. Consulte la ilustración. La red está configurada con enrutamiento RIP. ¿Qué mecanismo impide que R1 envíe una actualización de información sobre la red A a R3?",
+    "tipo": "radio",
+    "imagen": "Picture21.jpg",
+    "opciones": {
+        "a": "Envenenamiento en reversa",
+        "b": "horizonte dividido",
+        "c": "temporizadores de espera",
+        "d": "TTL"
+    },
+    "correctas": ["b"]
+    },
+    {
+    "id": "q22",
+    "texto": "22. Consulte la ilustración. ¿Qué se representa con la ruta Null0 para la red 128.107.0.0?",
+    "tipo": "radio",
+    "imagen":"Picture22.jpg",
+    "opciones": {
+        "a": "Una ruta secundaria definida",
+ 	    "b": "Una ruta principal definida y originada de una interfaz física",
+ 	    "c": "Una ruta sumarizada con fines de publicación, no una ruta real",
+ 	    "d": "El resultado del comando no auto-summary en un router"
+    },
+    "correctas": ["c"]
+    },
+    {
+    "id": "q23",
+    "texto": "23. Un administrador de red ejecuta el comando show ip route y observa esta línea de resultados: R 192.168.3.0/24 [120/2] vía 192.168.2.2, 00:00:05, Serial0/0 ¿Cuáles son los datos que puede obtener de este resultado? (Elija dos opciones).",
+    "tipo": "checkbox",
+    "imagen":"",
+    "opciones": {
+        "a": "RIP es el protocolo de enrutamiento configurado.",
+ 	    "b": "Se trata de una ruta estática a la red 192.168.3.0.",
+ 	    "c": "La métrica para esta ruta es 2.",
+ 	    "d": "La siguiente actualización periódica es en 5 segundos.",
+ 	    "e": "El número del sistema autónomo es 120."
+    },
+    "correctas": ["a","c"]
+    },
+    {
+    "id": "q24",
+    "texto": "24. Consulte la muestra. Un administrador de red está solucionando un problema de enrutamiento. Cuando se introduce el comando show ip route en el RTR-1, sólo se aprendió el enlace serial entre el RTR-2 y el RTR-3 del protocolo de enrutamiento RIP. ¿Cuáles son los dos aspectos que se deben tener en cuenta? (Elija dos opciones).",
+    "tipo": "checkbox",
+    "imagen":"Picture24.jpg",
+    "opciones": {
+        "a": "RIPv1 es un protocolo de enrutamiento con clase.",
+ 	    "b": "RIPv1 no admite la división en subredes.",
+ 	    "c": "Las redes Ethernet del RTR-2 y el RTR-3 no se introdujeron correctamente en las sentencias de red en estos routers.",
+ 	    "d": "RIPv1 no admite la VLSM.",
+ 	    "e": "RIPv1 es un protocolo de enrutamiento sin clase."
+        },
+    "correctas": ["a", "d"]
+    }
+]
