@@ -109,12 +109,8 @@
 
     a.button {
       display: inline-block;
-<<<<<<< HEAD
-      background: var(--accent);
-=======
   /*    background: var(--accent);*/
       background: blue;
->>>>>>> c725d78235830cac2b6f31473162c0342e747f83
       color: white;
       padding: 0.5rem 1.2rem;
       border-radius: 6px;
@@ -166,10 +162,7 @@
     <img src="images/Cisco_logo.svg" alt="Cisco logo">
     <h1>Servidor Local - Profe Osvaldo Cantone</h1>
     <p>Acceso a materiales y laboratorios</p>
-<<<<<<< HEAD
-=======
    <!-- <a class="button" href="LOTEO.cpp" download>Descargar LOTEO.CPP</a>  -->
->>>>>>> c725d78235830cac2b6f31473162c0342e747f83
   </header>
 
   <main>
